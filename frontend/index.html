@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cowworker — поиск и бронирование коворкингов</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="preload" href="images/hero-cow.png" as="image">
+    <link rel="preload" href="images/hero-bg.png" as="image">
+</head>
+
+<body>
+
+<div id="successNotice" class="success-notice">
+    ✅ Бронирование успешно подтверждено!
+    <button id="closeNotice" class="notice-close" type="button">×</button>
+</div>
+
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="images/favicon.png" alt="Cowworker">
+    <span>Cow</span><strong>worker</strong>
+  </a>
+
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="bookings.html">Список бронирований</a>
+    <a href="index.html#about">О сервисе</a>
+  </nav>
+
+  <button class="login-button" type="button">Войти</button>
+</header>
+
+<section class="home-hero">
+
+    <div class="hero-visual">
+
+        <img
+            src="images/hero-cow.png"
+            alt="Корова работает за ноутбуком"
+            width="1100"
+            height="1242"
+            fetchpriority="high"
+        >
+
+    </div>
+
+    <div class="hero-text">
+
+        <h1>
+            Найдите идеальное рабочее
+            <span>пространство</span>
+        </h1>
+
+        <p>
+            Удобные коворкинги для работы,
+            учёбы и встреч в центре вашей жизни.
+        </p>
+
+        <a class="main-button" href="catalog.html">
+            Перейти в каталог →
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="section-head">
+        <h2>Популярные коворкинги</h2>
+
+        <a href="catalog.html">
+            Смотреть все →
+        </a>
+    </div>
+
+    <div
+        id="popularCoworkings"
+        class="popular-scroll">
+    </div>
+
+</section>
+
+<section id="about" class="benefits-section">
+
+    <div class="benefit-item">
+        <div class="benefit-icon">🔍</div>
+
+        <div>
+            <h3>Удобный поиск</h3>
+            <p>Фильтры по метро, цене и удобствам.</p>
+        </div>
+    </div>
+
+    <div class="benefit-item">
+        <div class="benefit-icon">🗓️</div>
+
+        <div>
+            <h3>Быстрое бронирование</h3>
+            <p>Пара кликов — и место ваше.</p>
+        </div>
+    </div>
+
+    <div class="benefit-item">
+        <div class="benefit-icon">💸</div>
+
+        <div>
+            <h3>Честные цены</h3>
+            <p>Без скрытых платежей и комиссий.</p>
+        </div>
+    </div>
+
+    <div class="benefit-item">
+        <div class="benefit-icon">🌱</div>
+
+        <div>
+            <h3>Комфорт и тишина</h3>
+            <p>Выбирайте уровень шума и тип места.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer class="cow-footer">
+    <p>
+        © 2026 Cowworker — Веб-приложение поиска и бронирования коворкингов
+    </p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/index.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const notice = document.getElementById("successNotice");
+    const closeButton = document.getElementById("closeNotice");
+
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("booked") === "1") {
+        notice.classList.add("show");
+    }
+
+    closeButton.addEventListener("click", () => {
+        notice.classList.remove("show");
+    });
+
+});
+
+</script>
+
+</body>
+</html>

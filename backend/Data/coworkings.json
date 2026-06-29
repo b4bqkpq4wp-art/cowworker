@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "SixOne Space",
+    "district": "Арбат",
+    "metro": "Арбатская",
+    "address": "Москва, Новый Арбат, 21",
+    "description": "Современный коворкинг в центре Москвы.",
+    "pricePerHour": 450,
+    "rating": 4.8,
+    "noiseLevel": "Тихо",
+    "type": "Hot Desk",
+    "imageUrl": "images/sixone.jpg",
+    "amenities": ["Wi-Fi", "Кофе", "Переговорные"]
+  },
+  {
+    "id": 2,
+    "name": "Work Point",
+    "district": "Тверской",
+    "metro": "Белорусская",
+    "address": "Москва, Лесная, 5",
+    "description": "Коворкинг рядом с деловым центром.",
+    "pricePerHour": 550,
+    "rating": 4.9,
+    "noiseLevel": "Средне",
+    "type": "Dedicated Desk",
+    "imageUrl": "images/workpoint.jpg",
+    "amenities": ["Wi-Fi", "Принтер", "Кухня"]
+  },
+  {
+    "id": 3,
+    "name": "Focus Point",
+    "district": "Басманный",
+    "metro": "Курская",
+    "address": "Москва, Земляной Вал, 9",
+    "description": "Тихое пространство для учебы, фриланса и удаленной работы.",
+    "pricePerHour": 350,
+    "rating": 4.7,
+    "noiseLevel": "Тихо",
+    "type": "Hot Desk",
+    "imageUrl": "images/focuspoint.jpg",
+    "amenities": ["Wi-Fi", "Тихая зона", "Кофе"]
+  },
+  {
+    "id": 4,
+    "name": "Open Flow",
+    "district": "Замоскворечье",
+    "metro": "Павелецкая",
+    "address": "Москва, Валовая, 35",
+    "description": "Просторный коворкинг с переговорными комнатами и зонами отдыха.",
+    "pricePerHour": 500,
+    "rating": 4.6,
+    "noiseLevel": "Средне",
+    "type": "Meeting Room",
+    "imageUrl": "images/openflow.jpg",
+    "amenities": ["Wi-Fi", "Переговорные", "Шкафчики"]
+  },
+  {
+    "id": 5,
+    "name": "Green Desk",
+    "district": "Пресненский",
+    "metro": "Улица 1905 года",
+    "address": "Москва, Пресненский Вал, 14",
+    "description": "Уютное рабочее пространство с зеленой зоной и спокойной атмосферой.",
+    "pricePerHour": 0,
+    "rating": 4.8,
+    "noiseLevel": "Тихо",
+    "type": "Fixed Desk",
+    "imageUrl": "images/greendesk.jpg",
+    "amenities": ["Wi-Fi", "Кофе", "Зона отдыха"]
+  }
+]

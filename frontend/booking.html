@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование — Cowworker</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="index.html" class="logo">
+    <img src="images/favicon.png" alt="Cowworker">
+    <span>Cow</span><strong>worker</strong>
+  </a>
+
+  <nav class="nav">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="bookings.html">Список бронирований</a>
+    <a href="index.html#about">О сервисе</a>
+  </nav>
+
+  <button class="login-button" type="button">Войти</button>
+</header>
+
+<main class="section">
+  <a href="catalog.html" class="back-link">← Назад к каталогу</a>
+  <h1>Бронирование рабочего места</h1>
+
+  <div class="booking-layout">
+    <div id="selectedCoworking" class="card"></div>
+
+    <form id="bookingForm" class="form-card" novalidate>
+      <label>
+        Ваше имя
+        <input id="customerName" type="text" placeholder="Имя" required>
+        <small id="nameError" class="field-error"></small>
+      </label>
+
+      <label>
+        Email
+        <input id="email" type="text" placeholder="example@mail.ru" required>
+        <small id="emailError" class="field-error"></small>
+      </label>
+
+      <label>
+        Дата бронирования
+        <input id="date" type="date" required>
+        <small id="dateError" class="field-error"></small>
+      </label>
+
+      <label>
+        Время начала
+        <select id="startTime" required></select>
+        <small id="timeError" class="field-error"></small>
+      </label>
+
+      <label>
+        Количество часов
+        <input id="hours" type="number" min="1" max="12" value="1" placeholder="Часы" required>
+      </label>
+
+      <button class="button button-green" type="submit">
+        Подтвердить бронирование
+      </button>
+    </form>
+  </div>
+
+  <div id="bookingResult"></div>
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

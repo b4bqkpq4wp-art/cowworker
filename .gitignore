@@ -1,0 +1,10 @@
+# .NET build output
+bin/
+obj/
+
+# VS Code / OS
+.vscode/
+.DS_Store
+
+# Logs
+*.log
